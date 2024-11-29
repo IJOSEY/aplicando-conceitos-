@@ -22,13 +22,38 @@ int main (){
         scanf("%f",&nota2);
         printf("Digite a terceira nota: ");
         scanf("%f",&nota3);
-        media = (nota1 + nota2 + nota3)/3;
-        printf("A média é de: %.2f\n",media);
+        if ((nota1 >= 0 && nota1<=10)&&
+            (nota2 >=0 && nota2<=10)&&
+            (nota3 >= 0 && nota3<= 10))
+        {
+           printf("notas são validas!\n");
+            media = (nota1 + nota2 + nota3)/3;
+           printf("A média é de: %.2f\n",media);
+        }
+        else 
+        {
+            printf("notas são inválidas!\n");
+        }
+        
+       
         break;
     case 2:
         printf("Definir status.\n");
         printf("Digite a sua média: ");
         scanf("%f",&media);
+        if (media >= 7.0)
+        {
+            printf("Aluno aprovado!\n");
+        }
+        else if (media >= 5.0 && media < 7.0)
+        {
+            printf("Aluno está de recuperação!\n");
+        } else
+        {
+            printf("Aluno está de reprovado!\n");
+        }
+        
+        
         break;
     case 3:
         printf("Finalizando sessão!!.....");
@@ -38,4 +63,5 @@ int main (){
         printf("Opção inválida. Tente novamente!\n");
         break;
     }
+    return 0;
 }
