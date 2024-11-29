@@ -15,6 +15,7 @@ int main (){
     switch (opcao)
     {
     case 1:
+        printf("Calcular média.\n"); 
         printf("Digite a primeira nota: ");
         scanf("%f",&nota1);
         printf("Digite a segunda nota: ");
@@ -25,13 +26,16 @@ int main (){
         printf("A média é de: %.2f\n",media);
         break;
     case 2:
-        /* code */
+        printf("Definir status.\n");
+        printf("Digite a sua média: ");
+        scanf("%f",&media);
         break;
     case 3:
-        printf("Finalizando sessão!!");
+        printf("Finalizando sessão!!.....");
         break;
     
     default:
+        printf("Opção inválida. Tente novamente!\n");
         break;
     }
 }
