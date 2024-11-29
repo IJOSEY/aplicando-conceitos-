@@ -41,6 +41,8 @@ int main (){
         printf("Definir status.\n");
         printf("Digite a sua média: ");
         scanf("%f",&media);
+
+        /*media < 5 ? printf("Aprovado!\n") : printf("Reprovado!\n");*/
         if (media >= 7.0)
         {
             printf("Aluno aprovado!\n");
