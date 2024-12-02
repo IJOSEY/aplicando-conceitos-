@@ -22,69 +22,78 @@ printf("I. Número é igual.\n");
 printf("Digite sua opção: ");
 scanf("%c",&opcao);
 //4° depois receber número do usário.
-
-switch (opcao)
-{
-case 'M':
-case 'm':
-printf("Digite seu número de 1 á 100:");
+printf("Digite seu número de 1 á 100: ");
 scanf("%d",&numeroplayer);
 
-    if ( numeroplayer > numeropc)
+printf("número do computador: %d",numeropc);
+//5° jogo deve compara o número do usário com do computador.
+switch (opcao)
+{
+    //a. se escolher maior número for maior você ganhou.
+case 'M':
+case 'm':
+printf("Você escolheu Maior!");
+    
+    comparar = numeroplayer > numeropc ? 1 : 0;
+
+    if (comparar)
     {
         printf("Você venceu!!\n");
         printf("Número do usuário: %d é maior que número da maquina: %d\n",numeroplayer,numeropc);
+        //6°imprimir número do usário e computador para verificar a resposta. 
     }
     else
     {
         printf("Você perdeu!!\n");
         printf("Número do usuário: %d não é maior que número da maquina: %d \n",numeroplayer,numeropc);
+        //6°imprimir número do usário e computador para verificar a resposta. 
     }
     
     break;
+    //b. se escolher menor número for menor ganhou.
 case 'N':
 case 'n':
-printf("Digite seu número de 1 á 100:");
-scanf("%d",&numeroplayer);
+printf("Você escolheu Menor!");
 
-    if ( numeroplayer < numeropc)
+     comparar = numeroplayer < numeropc ? 1 : 0;
+
+    if ( comparar)
     {
         printf("Você venceu!!\n");
         printf("Número do usuário: %d é menor que número da maquina: %d\n",numeroplayer,numeropc);
+        //6°imprimir número do usário e computador para verificar a resposta. 
     }
     else
     {
         printf("Você perdeu!!\n");
         printf("Número do usuário: %d não é menor que número da maquina: %d\n",numeroplayer,numeropc);
+        //6°imprimir número do usário e computador para verificar a resposta. 
     }
     break;
+    //c. se escolher igual número for igual ganhou.
 case 'I':
 case 'i':
+printf("Você escolheu Igual!");
 
-printf("Digite seu número de 1 á 100:");
-scanf("%d",&numeroplayer);
+ comparar = numeroplayer == numeropc ? 1 : 0 ;
 
-    if ( numeroplayer == numeropc)
+    if ( comparar)
     {
         printf("Você venceu!!\n");
         printf("Número do usuário: %d é igual ao número da maquina: %d\n",numeroplayer,numeropc);
+        //6°imprimir número do usário e computador para verificar a resposta. 
     }
     else
     {
         printf("Você perdeu!!\n");
         printf("Número do usuário: %d não é igual ao número da maquina: %d\n",numeroplayer,numeropc);
+        //6°imprimir número do usário e computador para verificar a resposta. 
     }
     break;
+    //d. caso contrário perdeu.
 default:
 printf("Opção invalida!!\n");
     break;
-}
-
-//5° jogo deve compara o número do usário com do computador.
-   //a. se escolher maior número for maior você ganhou.
-   //b. se escolher menor número for menor ganhou.
-   //c. se escolher igual número for igual ganhou.
-   //d. caso contrário perdeu.
-//6°imprimir número do usário e computador para verificar a resposta.   
+}   
 return 0;
 }
